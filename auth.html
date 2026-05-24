@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Empire - Elite Access Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins',
+                            'sans-serif'],
+                    },
+                    colors: {
+                        charcoal: '#090B11',
+                        vortexBlue: '#111827',
+                        seaGreen: '#0D9488',
+                        mintGreen: '#2DD4BF',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Reset & Performance Tuning */
+        body, html {
+            background-color: #090B11;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 3D Perspective Architecture */
+        .perspective-stage {
+            perspective: 1400px;
+            transform-style: preserve-3d;
+        }
+
+        /* Outer animated bounding box hosting the dynamic breathing matrix */
+        .breathing-wrapper {
+            will-change: transform;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* 3D Interactive Card Alignment */
+        .interactive-card {
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+        }
+
+        /* Clean High-End Minimalistic Glassmorphism Inner Core */
+        .glass-core {
+            background: rgba(9, 11, 17, 0.85);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
+        }
+
+        .glass-accent-pill {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Ambient Geometric Engine Grid */
+        .grid-blueprint {
+            background-size: 40px 40px;
+            background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+        }
+
+        /* Continuous High-Fidelity Border Spin Loop */
+        @keyframes border-track-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-border-glow {
+            animation: border-track-spin 5s linear infinite;
+        }
+
+        /* Super Smooth, Relaxing Up-Down Breathing Animation */
+        @keyframes breathe-vertical {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .animate-breathe {
+            animation: breathe-vertical 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        /* Elite Shimmer Interaction Layer */
+        .shimmer-trigger {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-trigger::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 30%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(45, 212, 191, 0.15), transparent);
+            transform: rotate(30deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .shimmer-trigger:hover::after {
+            opacity: 1;
+            left: 130%;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center font-sans text-white select-none perspective-stage grid-blueprint">
+
+    <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-teal-950/20 rounded-full blur-[160px] pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-950/20 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="absolute top-12 left-12 text-[10px] font-semibold tracking-[0.3em] text-white/20 uppercase pointer-events-none hidden md:block">
+        PORTAL // GATEWAY.SECURE
+    </div>
+    <div class="absolute bottom-12 right-12 text-[10px] font-semibold tracking-[0.3em] text-white/20 uppercase pointer-events-none hidden md:block">
+        VORTEX EMPIRE ARCHITECTURE &copy; 2026
+    </div>
+
+    <div id="auth-container" class="w-full max-w-[420px] px-6 relative z-10 animate-breathe breathing-wrapper">
+
+        <div id="portal-card" class="interactive-card w-full rounded-[32px] p-[1.2px] relative overflow-hidden bg-white/[0.06]">
+
+            <div class="absolute inset-[-60%] bg-[conic-gradient(from_0deg,transparent_40deg,#0D9488_140deg,#2DD4BF_180deg,transparent_220deg,transparent_360deg)] animate-border-glow pointer-events-none origin-center"></div>
+
+            <div class="glass-core w-full rounded-[31px] p-8 md:p-10 flex flex-col items-center text-center relative z-10">
+
+                <div class="w-14 h-14 rounded-2xl border border-white/10 flex items-center justify-center bg-gradient-to-br from-white/[0.03] to-transparent relative mb-8 group" style="transform: translateZ(30px);">
+                    <div class="absolute inset-2 border border-dashed border-white/20 rounded-xl group-hover:rotate-45 transition-transform duration-700"></div>
+                    <div class="absolute inset-3.5 border border-mintGreen/30 rounded-lg group-hover:-rotate-45 transition-transform duration-700"></div>
+                    <div class="w-2 h-2 bg-gradient-to-tr from-seaGreen to-mintGreen rounded-full shadow-[0_0_10px_#2dd4bf]"></div>
+                </div>
+
+                <div style="transform: translateZ(20px);" class="mb-3">
+                    <h1 class="text-2xl font-normal tracking-tight text-white">
+                        Create Your <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-mintGreen">Empire Account</span>
+                    </h1>
+                </div>
+                <p style="transform: translateZ(15px);" class="text-xs text-slate-400 font-light max-w-[280px] leading-relaxed mb-10">
+                    Synchronize enterprise assets and initialize your modernization network architecture instantly.
+                </p>
+
+                <div style="transform: translateZ(40px);" class="w-full mb-8 relative">
+                    <button id="google-auth-trigger" class="shimmer-trigger glass-accent-pill w-full py-4 px-6 rounded-2xl flex items-center justify-between group hover:border-mintGreen/40 hover:bg-white/[0.04] active:scale-[0.98]">
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-6 h-6 bg-white rounded-lg flex items-center justify-center shadow-md p-1.5 shrink-0">
+                                <svg viewBox="0 0 24 24" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335" />
+                                </svg>
+                            </div>
+                            <span class="text-xs font-semibold tracking-wider text-slate-200 uppercase group-hover:text-white transition-colors">
+                                Continue with Google
+                            </span>
+                        </div>
+
+                        <div class="flex items-center text-slate-500 group-hover:text-mintGreen transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+                <div style="transform: translateZ(10px);" class="w-full border-t border-white/[0.04] pt-6 flex items-center justify-center space-x-2 text-[10px] font-semibold tracking-widest text-white/30 uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-seaGreen/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span>Enterprise Onboarding Protection</span>
+                </div>
+
+                <div id="execution-overlay" class="absolute inset-0 bg-charcoal/95 backdrop-blur-xl flex flex-col items-center justify-center p-8 transition-all duration-700 opacity-0 pointer-events-none scale-105 z-30 rounded-[31px]">
+
+                    <div class="w-16 h-16 relative mb-6">
+                        <div class="absolute inset-0 border-2 border-white/[0.05] rounded-full"></div>
+                        <div class="absolute inset-0 border-2 border-transparent border-t-mintGreen rounded-full animate-spin"></div>
+                    </div>
+
+                    <div class="text-3xl font-bold tracking-tighter text-white mb-2">
+                        <span id="crypto-counter">00</span><span class="text-xs text-mintGreen/60 uppercase ml-0.5">%</span>
+                    </div>
+
+                    <p id="system-status-log" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 h-4 transition-all duration-200">
+                        Initializing Gateway...
+                    </p>
+
+                    <div class="w-32 h-[2px] bg-white/[0.08] mt-6 relative overflow-hidden rounded-full">
+                        <div id="status-bar-line" class="absolute left-0 top-0 h-full w-0 bg-gradient-to-r from-teal-500 to-mintGreen transition-all duration-300"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module">
+        // Import Modern Firebase modular SDK components from official CDN standard paths
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import {
+            getAuth,
+            signInWithPopup,
+            GoogleAuthProvider
+        } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+        // ============================================================================
+        // 🛠️ FIREBASE CONFIGURATION PASTE CONFIG MATRIX
+        // Replace the dummy properties below with your genuine web application project parameters.
+        // ============================================================================
+        const firebaseConfig = {
+  apiKey: "AIzaSyDtvjI-ImiWt-QUE4N-qgG_zkVwMn-7q0U",
+  authDomain: "vortex-atri-hub.firebaseapp.com",
+  projectId: "vortex-atri-hub",
+  storageBucket: "vortex-atri-hub.firebasestorage.app",
+  messagingSenderId: "852943761312",
+  appId: "1:852943761312:web:50a177a49a50532685fec5"
+};
+        // Initialize App Container and Security Engine Instances
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        initializeSmoothParallax();
+        bindIdentityHandshake();
+
+        function initializeSmoothParallax() {
+            const card = document.getElementById("portal-card");
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+            if (!isMobile) {
+                document.addEventListener("mousemove", (e) => {
+                    const {
+                        clientX, clientY
+                    } = e;
+                    const centerX = window.innerWidth / 2;
+                    const centerY = window.innerHeight / 2;
+
+                    const xFraction = (clientX - centerX) / centerX;
+                    const yFraction = (clientY - centerY) / centerY;
+
+                    const maxPitch = yFraction * -8;
+                    const maxYaw = xFraction * 8;
+
+                    card.style.transform = `rotateX(${maxPitch}deg) rotateY(${maxYaw}deg)`;
+                });
+
+                document.addEventListener("mouseleave", () => {
+                    card.style.transform = "rotateX(0deg) rotateY(0deg)";
+                });
+            } else {
+                window.addEventListener("touchmove", (e) => {
+                    if (e.touches.length > 0) {
+                        const trace = e.touches[0];
+                        const xOffset = (trace.clientX / window.innerWidth - 0.5) * 2;
+                        const yOffset = (trace.clientY / window.innerHeight - 0.5) * 2;
+
+                        card.style.transform = `rotateX(${yOffset * -5}deg) rotateY(${xOffset * 5}deg)`;
+                    }
+                },
+                    {
+                        passive: true
+                    });
+            }
+        }
+
+        /**
+        * Authentic Onboarding Handshake Matrix via Firebase Auth Node Pipeline
+        */
+        function bindIdentityHandshake() {
+            const gatewayButton = document.getElementById("google-auth-trigger");
+            const executionOverlay = document.getElementById("execution-overlay");
+            const numericalCounter = document.getElementById("crypto-counter");
+            const stringLogger = document.getElementById("system-status-log");
+            const mechanicalProgress = document.getElementById("status-bar-line");
+            const wrapper = document.getElementById("auth-container");
+
+            let targetProgress = 0;
+            let currentProgress = 0;
+            let progressInterval = null;
+
+            // Fluid UI progressive meter logic linked to variable system speeds
+            function syncVisualMeter(target,
+                completeCallback = null) {
+                targetProgress = target;
+                if (progressInterval) clearInterval(progressInterval);
+
+                progressInterval = setInterval(() => {
+                    if (currentProgress < targetProgress) {
+                        currentProgress += Math.floor(Math.random() * 3) + 1;
+                        if (currentProgress > targetProgress) currentProgress = targetProgress;
+
+                        numericalCounter.innerText = currentProgress < 10 ? `0${currentProgress}`: currentProgress;
+                        mechanicalProgress.style.width = `${currentProgress}%`;
+                    } else {
+                        clearInterval(progressInterval);
+                        if (completeCallback) completeCallback();
+                    }
+                },
+                    20);
+            }
+
+            function updateStatusLog(msg) {
+                stringLogger.style.opacity = "0";
+                setTimeout(() => {
+                    stringLogger.innerText = msg;
+                    stringLogger.style.opacity = "1";
+                },
+                    100);
+            }
+
+            gatewayButton.addEventListener("click",
+                () => {
+                    // Check if API key placeholder wasn't swapped out to prevent standard structural script errors
+                    if (firebaseConfig.apiKey.includes("YOUR_API_KEY")) {
+                        alert("Firebase Core Configuration Detected Missing Variables.\\nPlease paste your authenticated Web API credentials inside the specified config code section layout.");
+                        return;
+                    }
+
+                    // Smoothly stall background breathing layer to establish architectural focus
+                    wrapper.classList.remove("animate-breathe");
+
+                    // Engage Glassmorphic system loading state
+                    executionOverlay.classList.remove("opacity-0", "pointer-events-none", "scale-105");
+                    executionOverlay.classList.add("opacity-100", "scale-100");
+
+                    // Initialization Sequence Launch Phase
+                    updateStatusLog("Connecting Google Auth Provider...");
+                    syncVisualMeter(35);
+
+                    // Initialize Live Asynchronous Handshake
+                    signInWithPopup(auth, provider)
+                    .then((result) => {
+                        // Phase 2: Token verified, establishing unique architecture session context
+                        updateStatusLog("Handshake verified. Accessing user context...");
+                        syncVisualMeter(75, () => {
+
+                            // Phase 3: Final structural checks complete, prepare portal bridge
+                            updateStatusLog("Configuring Workspace Environment...");
+                            syncVisualMeter(100, () => {
+                                setTimeout(() => {
+                                    // Seamless automated pipeline routing to target dashboard architecture destination
+                                    window.location.href = "dashboard.html";
+                                }, 500);
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        // Error State Resolution Handling Sequence
+                        console.error("Authentication Matrix Pipeline Interrupted:", error);
+                        updateStatusLog("Handshake Failed. Resetting Portal...");
+
+                        syncVisualMeter(0, () => {
+                            setTimeout(() => {
+                                // Gracefully close authentication overlay layer and re-engage breathing tracking animation
+                                executionOverlay.classList.add("opacity-0", "pointer-events-none", "scale-105");
+                                executionOverlay.classList.remove("opacity-100", "scale-100");
+                                wrapper.classList.add("animate-breathe");
+                                currentProgress = 0;
+                            }, 1000);
+                        });
+                    });
+                });
+        }
+    </script>
+</body>
+</html>
